@@ -1,5 +1,5 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11
 VOLUME /tmp
 EXPOSE 8080
-ADD target/*.jar app.jar
-ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
+ADD target/*.jar hello-world-rest-api.jar
+ENTRYPOINT [ "sh", "-c", "java -jar hello-world-rest-api.jar" ]
